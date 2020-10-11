@@ -1,1 +1,34 @@
+spring:
+  profiles:
+    active: default
+db:
+  master:
+    username: root
+    password: 1234
+    host: localhost
+    database: mounting_sso
+    port: 3306
+    maxIdle: 10
+    minIdle: 10
+    connect-timeout: 5000
+  slave:
+    username: root
+    password: 1234
+    host: localhost
+    database: mounting_sso
+    port: 3306
+    maxIdle: 10
+    minIdle: 10
+    connect-timeout: 5000
 
+logging:
+  level:
+    root: debug
+---
+
+spring:
+  profiles: dev
+
+---
+spring:
+  profiles: production
